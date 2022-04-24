@@ -40,6 +40,7 @@
 
       <?php if($multiUploadErr !== null)foreach($multiUploadErr as $err) echo "<div>" . $err . "</div>"; ?>
       <!-- Multi File Upload End -->
+      
     </form>
     
 <?php render("footer"); ?>
