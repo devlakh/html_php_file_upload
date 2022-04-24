@@ -28,8 +28,8 @@ Class UploadFile
     // Check if file already exists
     if (file_exists($target_file)) return "Sorry, file already exists.";
 
-    // Check file size
-    if ($_file["size"] > 500000) return "Sorry, your file is too large.";
+    // Check file size (5242880 bytes = 5 mb)
+    if ($_file["size"] > 5242880) return "Sorry, your file is too large.";
 
     // Allow certain file formats
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) return "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
@@ -81,8 +81,8 @@ Class UploadFile
         continue;
       }
 
-      // Check file size
-      if ($_files["size"][$i] > 500000) 
+      // Check file size (5242880 bytes = 5 mb)
+      if ($_files["size"][$i] > 5242880)
       {
         array_push($message, "Sorry, your file is too large.");
         continue;

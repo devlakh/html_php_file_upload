@@ -2,6 +2,7 @@
 <?php include("../includes/UploadFile.php"); ?>
 
 <?php render("header"); ?>
+
     <?php
       $uploadErr = "";
       $multiUploadErr = array();
